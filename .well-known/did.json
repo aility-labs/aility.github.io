@@ -1,0 +1,48 @@
+{
+  "id": "did:web:aility.org",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:aility.org"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://aility.org/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/923c4a36-125e-46b4-b1f3-27fa601f9bdb"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#965f14ceb93b40d2a60522f8826f1bdbvcSigningKey-66ae5",
+      "controller": "did:web:aility.org",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "p3LdyIzSwMjpVPcxtaSkXvOfmMm5L6xp1gmC4WA6yRE",
+        "y": "95EozCatmtNSJGu1OzmNHvVw5bjRLRx4puxNFuIc5E0"
+      }
+    }
+  ],
+  "authentication": [
+    "#965f14ceb93b40d2a60522f8826f1bdbvcSigningKey-66ae5"
+  ],
+  "assertionMethod": [
+    "#965f14ceb93b40d2a60522f8826f1bdbvcSigningKey-66ae5"
+  ]
+}
